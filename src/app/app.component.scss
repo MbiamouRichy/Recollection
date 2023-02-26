@@ -36,6 +36,7 @@ main{
 }
 // big image recollection
 main .big_img_move{
+  padding-top: 20px;
   @include absolute_div(50%, none, none, 50%);
   width: 75pc;
   height: 300px;
@@ -43,7 +44,6 @@ main .big_img_move{
   transform: translate(-50%, -50%);
   background-image: url("../assets/recollection.png");
   background-position: 0px -2700px;
-  opacity: 1;
   background-repeat: no-repeat;
   transform-origin: center top;
   animation: move_bg 0.01ms ease infinite alternate;
@@ -51,12 +51,13 @@ main .big_img_move{
 
 // div text1
 .div_text1{
+  padding-top: 10px;
   @include absolute_div(65%, 0, none, 0);
   width: 100%;
   text-align: center;
   .subtitle{
     color: $texte-color1;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 200;
   }
 }
@@ -64,11 +65,44 @@ main .big_img_move{
 // div with spacebar part
 main{
   .div_spacebar{
+    padding-top: 20px;
     @include absolute_div(70%, 0, none, 0);
     width: 100%;
     text-align: center;
+    @extend %div_row;
+    justify-content: center;
+    margin: 0 auto;
     p{
-      color: $texte-color;
+      color: $texte-color1;
+      font-size: 1.1rem;
+    }
+  }
+}
+main{
+  .spacebar_button{
+    width: 140px;
+    display: block;
+    background: transparent;
+    margin: 0px 7px 2px 7px;
+    position: relative;
+    svg{
+      fill: $texte-color1;
+    }
+    span{
+      @include absolute_div(20%, 0, none, 0);
+      color: $texte-color1;
+      font-size: 1.1rem;
+    }
+  }
+}
+//  copyright
+main{
+  .div_copy{
+    @include absolute_div(none, none, 30px, 30px);
+    width: auto;
+    text-align: center;
+    a, p{
+      color: $texte-color1;
     }
   }
 }
