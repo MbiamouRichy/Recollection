@@ -19,11 +19,9 @@ $texte-color1: #fff;
 /*=================================== MAIN =====================================*/
 /*=============================================================================*/
 // mobile
-main{
   .div_mobile{
     display: none;
   }
-}
 main{
   z-index: 5;
   overflow: hidden;
@@ -50,8 +48,8 @@ main .main_bg{
   animation: scale 3s  infinite;
   transform: scale(1);
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 // big image recollection
 main .big_img_move{
