@@ -4,6 +4,55 @@
     <img src="assets/logo-removebg-preview.png" alt="logo">
     <div class="presents">présente</div>
   </div>
-  <!----------------- recollection ----------------------->
+  <!----------------- big image recollection ----------------------->
   <div class="big_img_move"></div>
+  <!-------------------- text ------------------------->
+  <div class="div_text1">
+    <p class="subtitle">Une expérience interactive à travers 10 ans de musique.</p>
+  </div>
+  <!------------------- part with btn spacebar --------------------->
+  <div class="div_spacebar">
+    <p>Maintenez</p>
+    <button class="spacebar__button">
+      <div class="spacebar__button__inner" style="opacity: 1; width: 140px; transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0);">
+        <span style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">espace</span>
+      </div>
+      <svg viewBox="0 0 140 56" class="spacebar__svg" style="opacity: 1;">
+        <defs>
+          <path id="gradient-mask" d="M116,7c9.4,0,17,7.6,17,17c0,9.4-7.6,17-17,17H24c-9.4,0-17-7.6-17-17c0-9.4,7.6-17,17-17H116 M116,0H24C10.8,0,0,10.8,0,24v0c0,13.2,10.8,24,24,24h92c13.2,0,24-10.8,24-24v0C140,10.8,129.2,0,116,0L116,0z" data="[object Object]" transform="translate(0 0)"></path>
+          <path id="button-mask" d="M140,56H0c0-12.8,0-18.8,0-32v0C0,10.8,10.8,0,24,0l92,0c13.2,0,24,10.8,24,24v0 C140,37.2,140,46,140,56z" data="[object Object]" transform="translate(0 0)"></path>
+
+          <clipPath id="gradient-clip">
+            <use xlink:href="#gradient-mask" style="overflow:visible;"></use>
+          </clipPath>
+
+          <clipPath id="button-clip">
+            <use xlink:href="#button-mask" style="overflow:visible;"></use>
+          </clipPath>
+
+          <linearGradient id="gradient-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="24" x2="140" y2="24">
+            <stop offset="0" style="stop-color:#2C479A"></stop>
+            <stop offset="5.853638e-02" style="stop-color:#334896"></stop>
+            <stop offset="0.1385" style="stop-color:#444A90"></stop>
+            <stop offset="0.2308" style="stop-color:#5A4D86"></stop>
+            <stop offset="0.3324" style="stop-color:#755178"></stop>
+            <stop offset="0.4415" style="stop-color:#945865"></stop>
+            <stop offset="0.5553" style="stop-color:#BA6249"></stop>
+            <stop offset="0.6261" style="stop-color:#D36934"></stop>
+            <stop offset="0.8676" style="stop-color:#E9873A"></stop>
+            <stop offset="1" style="stop-color:#F6953E"></stop>
+          </linearGradient>
+        </defs>
+
+        <g style="clip-path:url('#button-clip')">
+          <g id="gradient" style="clip-path:url(#gradient-clip);">
+            <path id="gradient-path" style="fill: url(&quot;#gradient-gradient&quot;); transform: matrix(1, 0, 0, 1, -140, 0);" d="M116,48H24C10.8,48,0,37.2,0,24v0C0,10.8,10.8,0,24,0l92,0c13.2,0,24,10.8,24,24v0 C140,37.2,129.2,48,116,48z" data-svg-origin="0 0"></path>
+          </g>
+          <path id="background-path" d="M138,2v30c0,12.1-9.9,22-22,22H24C11.9,54,2,44.1,2,32V2H138 M140,0H0c0,14.9,0,18.8,0,32v0 c0,13.2,10.8,24,24,24h92c13.2,0,24-10.8,24-24v0C140,18.8,140,12.1,140,0L140,0z" data-svg-origin="0 0" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></path>
+          <path id="button-path" d="M116,2c12.1,0,22,9.9,22,22c0,12.1-9.9,22-22,22H24C11.9,46,2,36.1,2,24C2,11.9,11.9,2,24,2H116 M116,0H24C10.8,0,0,10.8,0,24v0c0,13.2,10.8,24,24,24h92c13.2,0,24-10.8,24-24v0C140,10.8,129.2,0,116,0L116,0z"></path>
+        </g>
+      </svg>
+    </button>
+    <p>pour lancer Because Recollection.</p>
+  </div>
 </main>

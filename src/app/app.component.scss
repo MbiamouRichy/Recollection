@@ -1,8 +1,11 @@
+/*============================= Variable =================================*/
 $color1: black;
+$texte-color: #858585;
+$texte-color1: #fff;
 /*=========================== PLACEHOLDER ================================*/
-%div_col{
+%div_row{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 /*============================== Mixin ======================================*/
@@ -27,7 +30,7 @@ main{
     text-align: center;
     .presents{
       font-size: 9pt;
-      color: #858585;
+      color: $texte-color;
     }
   }
 }
@@ -38,9 +41,70 @@ main .big_img_move{
   height: 300px;
   display: inline-block;
   transform: translate(-50%, -50%);
-  background-image: url("src/assets/2.png");
+  background-image: url("../assets/recollection.png");
+  background-position: 0px -2700px;
   opacity: 1;
   background-repeat: no-repeat;
   transform-origin: center top;
-  border: 1px solid red;
+  animation: move_bg 0.01ms ease infinite alternate;
+}
+
+// div text1
+.div_text1{
+  @include absolute_div(65%, 0, none, 0);
+  width: 100%;
+  text-align: center;
+  .subtitle{
+    color: $texte-color1;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+}
+
+// div with spacebar part
+main{
+  .div_spacebar{
+    @include absolute_div(70%, 0, none, 0);
+    width: 100%;
+    text-align: center;
+    p{
+      color: $texte-color;
+    }
+  }
+}
+/*--------------------- mise en place de l'animation ------------------*/
+@keyframes move_bg {
+  0%{
+    background-position: 0px -2700px;
+  }
+  10%{
+    background-position: 0px -2100px;
+  }
+  20%{
+    background-position: -1200px -2700px;
+  }
+  30%{
+    background-position: -1200px -2100px;
+  }
+  40%{
+    background-position: -1200px -1800px;
+  }
+  50%{
+    background-position: -2400px -2700px;
+  }
+  60%{
+    background-position: -2400px -2100px;
+  }
+  70%{
+    background-position: -2400px -1800px;
+  }
+  80%{
+    background-position: -1200px -1800px;
+  }
+  90%{
+    background-position: -1200px -2100px;
+  }
+  100%{
+    background-position: -1200px -1800px;
+  }
 }
