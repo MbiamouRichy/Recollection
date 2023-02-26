@@ -18,11 +18,17 @@ $texte-color1: #fff;
 }
 /*=================================== MAIN =====================================*/
 /*=============================================================================*/
+// pas sur desktop(h1_mobile p_mobile
+.div_mobile{
+  display: none;
+}
 main{
+  z-index: 5;
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  background: $color1;
+  @include absolute_div(50%, 0, 0, 50%);
+  transform: translate(-50%,-50%);
   // logo
   .logo{
     margin: 0 auto;
@@ -33,6 +39,17 @@ main{
       color: $texte-color;
     }
   }
+
+}
+// image bg
+main .main_bg{
+  position: relative;
+  z-index: -1;
+  animation: scale 3s ease-in-out infinite;
+  transform: scale(1);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 // big image recollection
 main .big_img_move{
@@ -80,16 +97,18 @@ main{
 }
 main{
   .spacebar_button{
+    cursor: pointer;
     width: 140px;
     display: block;
     background: transparent;
-    margin: 0px 7px 2px 7px;
+    margin: 0 7px;
     position: relative;
+    border: none;
     svg{
       fill: $texte-color1;
     }
     span{
-      @include absolute_div(20%, 0, none, 0);
+      @include absolute_div(25%, 0, none, 0);
       color: $texte-color1;
       font-size: 1.1rem;
     }
@@ -105,8 +124,34 @@ main{
       color: $texte-color1;
     }
   }
+  .div_copy_2{
+    @include absolute_div(none, 30px, 30px, none);
+    text-align: center;
+    a, p{
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: $texte-color1;
+      margin: 0 5px;
+    }
+    span{
+      color: $texte-color;
+    }
+    svg{
+      fill: $texte-color1;
+      width: 15px;
+      height: 15px;
+    }
+  }
 }
+//
 /*--------------------- mise en place de l'animation ------------------*/
+// background image main
+@keyframes scale {
+  to{
+    transform: scale(1.1);
+  }
+}
+// big image recollection
 @keyframes move_bg {
   0%{
     background-position: 0px -2700px;
@@ -140,5 +185,29 @@ main{
   }
   100%{
     background-position: -1200px -1800px;
+  }
+}
+/*===================== responsive ==========================*/
+@media only screen and (max-width: 767px) {
+   main{
+      display: none;
+   }
+ .div_mobile{
+   height: 100vh;
+   display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   margin: 5px;
+   svg{
+     fill: red;
+   }
+    .h1_mobile{
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .p_mobile{
+      font-size: 1.1em;
+    }
   }
 }
